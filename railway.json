@@ -1,7 +1,8 @@
 {
   "build": {
     "env": {
-      "SENDKEY": "你的SendKey"
+      "SENDKEY": "SCT291864TypJsxNKmXlDUq9y5EkgEsOtW
+"
     }
   },
   "start": "python bot.py"
