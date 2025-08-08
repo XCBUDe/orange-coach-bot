@@ -1,11 +1,10 @@
-import os
 import requests
+import os
 
-SENDKEY = os.getenv("SENDKEY")
+SENDKEY = os.getenv("SENDKEY", "SCT291864TypJsxNKmXlDUq9y5EkgEsOtW")  # 这里换成你的 SendKey
 
-def send_wechat(title: str, desp: str):
+def send_wechat(title, desp):
     url = f"https://sctapi.ftqq.com/{SENDKEY}.send"
     data = {"title": title, "desp": desp}
-    resp = requests.post(url, data=data, timeout=10)
-    resp.raise_for_status()
-    return resp.json()
+    res = requests.post(url, data=data)
+    print("Server酱返回：", res.text)
